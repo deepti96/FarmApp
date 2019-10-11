@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat Bot </title>
+	 <link rel="stylesheet" href="form.css">
+	 <script src="form.js"></script>
+	 <script>
+		startSpeaking = function(line){
+		  responsiveVoice.speak(line)
+		}
+
+</script>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/d4dc5bd7b5.js"></script>
+<script src='https://code.responsivevoice.org/responsivevoice.js'></script>
+<style>
+  nav
+{ 
+  padding-top: 16px;
+  height: 70px;
+  background-color: #ffffff !important;
+  /*box-shadow: 0 6px 8px 0 rgba(0,0,0,0.1), 0 17px 50px 0 rgba(0,0,0,0.1);*/
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#000;">
+  <div class="container-fluid" style="background-color:#000; color:#fff; padding:10px;margin-bottom:20px;">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><p style="color:#fff; font-size:25px;">&nbsp;&nbsp;TEAM SHARE</p></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right" style="color:#000">
+        <li><a href="http://localhost//index.html" style="color:#fff; font-size:15px;">HOME</a></li>
+        <li><a href="http://localhost//try5.php" style="color:#fff; font-size:15px;">BUY/SELL</a></li>
+        <li><a href="http://localhost//ChatBot2/form.html" style="color:#fff; font-size:15px;">HELPLINE</a></li>
+        <li><a href="http://localhost//smartfarm-master/smartfarm-master/www/index.html" style="color:#fff; font-size:15px;">PREDICT</a></li>
+        <li><a href="http://localhost//smartFarmWebApp-master/smartFarmWebApp-master/index.html" style="color:#fff; font-size:15px;">PREDICTION GRAPHS</a></li>
+        <!--<li><a href="<?php echo base_url(""); ?>nss/alumni" style="color:#fff">ALUMNI</a></li>-->
+        
+      </ul>
+    </div>
+  </div>
+</nav> 
+	<div id='bodybox' style="margin-top: 100px;">
+		<div id='chatborder'>
+			<p id="chatlog7" class="chatlog">&nbsp;</p>
+			<p id="chatlog6" class="chatlog">&nbsp;</p>
+			<p id="chatlog5" class="chatlog">&nbsp;</p>
+			<p id="chatlog4" class="chatlog">&nbsp;</p>
+			<p id="chatlog3" class="chatlog">&nbsp;</p>
+			<p id="chatlog2" class="chatlog">&nbsp;</p>
+			<p id="chatlog1" class="chatlog">&nbsp;</p>
+			<input type="text" name="chat" id="chatbox" placeholder="My name is Robo. Ask question | सवाल पूछिए: " onfocus="placeHolder()">
+		</div>
+	</div>
+</body>
+</html>

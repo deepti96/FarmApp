@@ -1,0 +1,108 @@
+body,
+html {
+  height: 100%;
+  display: grid;
+  scroll-behavior: smooth;
+}
+
+.app {
+  margin: 0 auto;
+  text-align: center;
+  display: inline;
+}
+
+#logo {
+  width: 600px;
+  height: 200px;
+  margin: auto;
+}
+
+#appName {
+  color: #EF4338;
+  font-family: 'Merriweather', serif;
+  font-size: 7rem;
+  line-height: normal;
+  vertical-align: middle;
+  margin: auto;
+  text-shadow: 2px 2px 5px rgba(150, 150, 150, 1);
+}
+
+.btn {
+  background-color: #EF4338 !important;
+  position: absolute;
+  bottom: 20px;
+  width: 20vw !important;
+}
+
+.thumbnail {
+  border-color: #EF4338 !important;
+  text-align: center;
+  border-width: 3px !important;
+  border-radius: 1rem !important;
+  height: 50vh;
+  margin: 50px 100px 100px 50px;
+  -webkit-box-shadow: 5px 5px 25px 0px rgba(239, 67, 56, 0.5);
+  -moz-box-shadow: 5px 5px 25px 0px rgba(239, 67, 56, 0.5);
+  box-shadow: 5px 5px 25px 0px rgba(239, 67, 56, 0.5);
+  transition: all .3s ease;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.thumbnail:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 5px 5px 40px 0px rgba(239, 67, 56, .75);
+  -moz-box-shadow: 5px 5px 40px 0px rgba(239, 67, 56, .75);
+  box-shadow: 5px 5px 40px 0px rgba(239, 67, 56, .75);
+}
+
+.icon {
+  padding: 30px;
+  width: 10vw;
+  height: 30vh;
+}
+
+.captionHead {
+  font-size: 40px;
+}
+
+table caption {
+  padding: .5em 0;
+}
+
+@media screen and (max-width: 767px) {
+  table caption {
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+.userTable {
+  margin: 10px 80px 80px 100px;
+  font-size: 22px;
+  border-radius: 15px !important;
+}
+
+.userTable2 {
+  margin: auto;
+  font-size: 22px;
+  width: 600px;
+  border-radius: 15px !important;
+  padding-bottom: 100px;
+  text-align: center;
+}
+
+.tableHead {
+  text-align: center;
+  margin: auto;
+  font-size: 50px;
+  padding-top: 200px;
+  font-weight: bold;
+}
+
+.heading {
+  background-color: #EF4338;
+  color: white;
+}

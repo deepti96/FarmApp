@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/d4dc5bd7b5.js"></script>
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD14IZlTd7-V-F4gmHFkRXr8XLZSkeKXbs",
+        authDomain: "smartfarm-18270.firebaseapp.com",
+        databaseURL: "https://smartfarm-18270.firebaseio.com",
+        projectId: "smartfarm-18270",
+        storageBucket: "",
+        messagingSenderId: "205130913977"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="js/angularfire.js"></script>
+    <script src="js/localforage.js"></script>
+    <style>
+  nav
+{ 
+  padding-top: 16px;
+  height: 70px;
+  background-color: #ffffff !important;
+  /*box-shadow: 0 6px 8px 0 rgba(0,0,0,0.1), 0 17px 50px 0 rgba(0,0,0,0.1);*/
+}
+</style>
+  </head>
+  <body ng-app="starter">
+  <nav class="navbar navbar-default navbar-fixed-top" style="background-color:#000;">
+  <div class="container-fluid" style="background-color:#000; color:#fff; padding:10px;margin-bottom:20px;">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><p style="color:#fff; font-size:25px;">&nbsp;&nbsp;AGROWORKS</p></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right" style="color:#000">
+        <li><a href="http://localhost//index.html" style="color:#fff; font-size:15px;">HOME</a></li>
+        <li><a href="http://localhost//try5.php" style="color:#fff; font-size:15px;">BUY/SELL</a></li>
+        <li><a href="http://localhost//ChatBot/ChatBot/form.html" style="color:#fff; font-size:15px;">HELPLINE</a></li>
+        <li><a href="http://localhost//smartfarm-master/smartfarm-master/www/index.html#/register" style="color:#fff; font-size:15px;">PREDICT</a></li>
+        <li><a href="http://localhost//smartFarmWebApp-master/smartFarmWebApp-master/index.html" style="color:#fff; font-size:15px;">PREDICTION GRAPHS</a></li>
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav> 
+
+  <ion-nav-view style="margin-top: 70px;"></ion-nav-view>
+  </body>
+</html>

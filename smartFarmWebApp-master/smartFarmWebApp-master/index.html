@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html ng-app="smartfarm">
+
+<head>
+    <title>AgroWorks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <script src="js/angular.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/angularfire.js"></script>
+    <script src="js/prediction/bajra.js"></script>
+    <script src="js/prediction/barley.js"></script>
+    <script src="js/prediction/jowar.js"></script>
+    <script src="js/prediction/maize.js"></script>
+    <script src="js/prediction/wheat.js"></script>
+    <script src="js/app.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/d4dc5bd7b5.js"></script>
+        <style>
+  nav
+{ 
+  padding-top: 16px;
+  height: 70px;
+  background-color: #ffffff !important;
+  /*box-shadow: 0 6px 8px 0 rgba(0,0,0,0.1), 0 17px 50px 0 rgba(0,0,0,0.1);*/
+}
+</style>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyD14IZlTd7-V-F4gmHFkRXr8XLZSkeKXbs",
+            authDomain: "smartfarm-18270.firebaseapp.com",
+            databaseURL: "https://smartfarm-18270.firebaseio.com",
+            projectId: "smartfarm-18270",
+            storageBucket: "",
+            messagingSenderId: "205130913977"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+
+<body ng-controller="FirstCtrl as first">
+<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#000;">
+  <div class="container-fluid" style="background-color:#000; color:#fff; padding:10px;margin-bottom:20px;">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#"><p style="color:#fff; font-size:25px;">&nbsp;&nbsp;AGROWORKS</p></a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right" style="color:#000">
+        <li><a href="http://localhost//index.html" style="color:#fff; font-size:15px;">HOME</a></li>
+        <li><a href="http://localhost//try5.php" style="color:#fff; font-size:15px;">BUY/SELL</a></li>
+        <li><a href="http://localhost//ChatBot/ChatBot/form.html" style="color:#fff; font-size:15px;">HELPLINE</a></li>
+        <li><a href="http://localhost//smartfarm-master/smartfarm-master/www/index.html#/register" style="color:#fff; font-size:15px;">PREDICT</a></li>
+        <li><a href="http://localhost//smartFarmWebApp-master/smartFarmWebApp-master/index.html" style="color:#fff; font-size:15px;">PREDICTION GRAPHS</a></li>
+        
+        
+        
+      </ul>
+    </div>
+  </div>
+</nav> 
+    <div class="app" style="margin-top: 100px;">
+        <h1 style="font-family: 'Algerian'; font-size: 100px; color: red;margin-top: 100px;">AGROWORKS</h1>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-6 col-md-6">
+            <div class="thumbnail" ng-click="first.usr()">
+                <img class="icon" src="img/user.png">
+                <div class="caption">
+                    <p class="captionHead">Users</p>
+                    <p>Details of application users and their alloted crops.</p>
+                        <a href="#user" class="btn btn-primary btn-block btn-large" role="button">Open</a>
+                </div>
+            </div>
+        </div>
+        <!--<div class="col-sm-4 col-md-4">
+            <div class="thumbnail" ng-click="first.crp()">
+                <img class="icon" src="img/crop.png">
+                <div class="caption">
+                    <p class="captionHead">Crops</p>
+                    <p>Details of crops and their initial and current requirements.</p>
+                        <a href="#crop" class="btn btn-primary btn-block" role="button">Open</a>
+                </div>
+            </div>
+        </div>-->
+        <div class="col-sm-6 col-md-6">
+            <div class="thumbnail" ng-click="first.prd()">
+                <img class="icon" src="img/prediction.png">
+                <div class="caption">
+                    <p class="captionHead">Prediction</p>
+                    <p>Graphs of the crop requirement prediction using Machine Learning.</p>
+                        <a href="#prediciton" class="btn btn-primary btn-block" role="button">Open</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tableHead" id="user">Users</div>
+    <div class="userTable">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="heading">
+                            <tr>
+                                <th>Name</th>
+                                <th>Village</th>
+                                <th>District</th>
+                                <th>Contact</th>
+                                <th>Area(hectare)</th>
+                                <th>Alloted</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="user in first.users">
+                                <td>{{user.name}}</td>
+                                <td>{{user.village}} </td>
+                                <td>{{user.district}}</td>
+                                <td>{{user.contact}}</td>
+                                <td>{{user.area}}</td>
+                                <th>{{user.alloted}}</th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tableHead" id="crop">Crop</div>
+    <div class="userTable2">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="heading">
+                            <tr>
+                                <th>Crop</th>
+                                <th>Initial Requirement (in tonnes)</th>
+                                <th>Current Requirement (in tonnes)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bajra</td>
+                                <td>5779025</td>
+                                <td>{{first.crops.Bajra}}</td>
+                            </tr>
+                            <tr>
+                                <td>Barley</td>
+                                <td>924739</td>
+                                <td>{{first.crops.Barley}}</td>
+                            </tr>
+                            <tr>
+                                <td>Jawar</td>
+                                <td>395615</td>
+                                <td>{{first.crops.Jawar}}</td>
+                            </tr>
+                            <tr>
+                                <td>Maize</td>
+                                <td>1930313</td>
+                                <td>{{first.crops.Maize}}</td>
+                            </tr>
+                            <tr>
+                                <td>Mustard</td>
+                                <td>1334351</td>
+                                <td>{{first.crops.Mustard}}</td>
+                            </tr>
+                            <tr>
+                                <td>Pulses</td>
+                                <td>1845677</td>
+                                <td>{{first.crops.Pulses}}</td>
+                            </tr>
+                            <tr>
+                                <td>Wheat</td>
+                                <td>12906344</td>
+                                <td>{{first.crops.Wheat}}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tableHead" id="prediction">Predictions</div>
+    <div class="row">
+        <div class="col-sm-2 col-md-2"></div>
+        <div class="col-sm-4 col-md-4" id="fig_el124901398488362738809628417702"></div>
+        <div class="col-sm-4 col-md-4" id="fig_el124901398489009299687220451363"></div>
+        <div class="col-sm-2 col-md-2"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-1 col-md-1"></div>
+        <div class="col-sm-5 col-md-5" id="fig_el28441593081450392375801200"></div>
+        <div class="col-sm-5 col-md-5" id="fig_el1101215908994948086944580377"></div>
+        <div class="col-sm-1 col-md-1"></div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4 col-md-4"></div>
+        <div class="col-sm-8 col-md-8" id="fig_el706415667263125687783256249"></div>
+        <div class="col-sm-4 col-md-4"></div>
+    </div>
+</body>
+
+</html>
